@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL Book Project</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f8ff;
+        color: #003366;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #004c99;
+        color: white;
+        padding: 15px 0;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .accordion {
+        width: 60%;
+        margin: 20px auto;
+        text-align: left;
+      }
+
+      .chapter {
+        background-color: white;
+        border: 2px solid #0055aa;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .chapter:hover {
+        background-color: #e6f0ff;
+      }
+
+      .examples {
+        display: none;
+        padding: 10px 15px;
+        background: #eef5ff;
+        border-left: 3px solid #0055aa;
+        margin-bottom: 5px;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .examples a {
+        display: block;
+        text-decoration: none;
+        color: #004c99;
+        font-size: 16px;
+        margin: 5px 0;
+        transition: 0.3s;
+      }
+
+      .examples a:hover {
+        color: white;
+        background: #0055aa;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>WebGL Book Project</header>
+
+    <div class="accordion">
+      <div class="chapter" onclick="toggleChapter('chapter1')">Chapter 1</div>
+      <div id="chapter1" class="examples">
+        <a href="examples/chapter1/ch01_01_canvas.html">Example 1 - Canvas</a>
+        <a href="examples/chapter1/ch01_02_context.html">Example 2 - Context</a>
+        <a href="examples/chapter1/ch01_03_attributes.html"
+          >Example 3 - Attributes</a
+        >
+        <a href="examples/chapter1/ch01_04_showroom.html"
+          >Example 4 - Showroom</a
+        >
+        <a href="examples/chapter1/ch01_05_attributes-final.html"
+          >Example 5 - Attributes - final</a
+        >
+      </div>
+
+      <div class="chapter" onclick="toggleChapter('chapter2')">Chapter 2</div>
+      <div id="chapter2" class="examples">
+        <a href="examples/chapter2/ch02_01_square.html">Example 1 - Square</a>
+        <a href="examples/chapter2/ch02_02_square-arrays.html"
+          >Example 2 - Square (Arrays)</a
+        >
+        <a href="examples/chapter2/ch02_03_square-vao.html"
+          >Example 3 - Square (VAO)</a
+        >
+        <a href="examples/chapter2/ch02_04_rendering-modes.html"
+          >Example 4 - Rendering Modes</a
+        >
+        <a href="examples/chapter2/ch02_05_state-machine.html"
+          >Example 5 - State Machine</a
+        >
+        <a href="examples/chapter2/ch02_06_cone.html">Example 6 - Cone</a>
+        <a href="examples/chapter2/ch02_07_ajax-cone.html"
+          >Example 7 - Ajax Cone</a
+        >
+        <a href="examples/chapter2/ch02_08_ajax-car.html"
+          >Example 8 - Ajax Car</a
+        >
+        <a href="examples/chapter2/ch02_09_ajax-car-final.html"
+          >Example 9 - Ajax Car Final</a
+        >
+      </div>
+
+      <div class="chapter" onclick="toggleChapter('chapter3')">Chapter 3</div>
+      <div id="chapter3" class="examples">
+        <a href="examples/chapter3/ch03_01_goraud-lambert.html"
+          >Example 1 - Goraud Lambert</a
+        >
+        <a href="examples/chapter3/ch03_02_moving-light.html"
+          >Example 2 - Moving Light</a
+        >
+        <a href="examples/chapter3/ch03_03_goraud-phong.html"
+          >Example 3 - Goraud Phong</a
+        >
+        <a href="examples/chapter3/ch03_04_sphere-phong.html"
+          >Example 4 - Sphere Phong</a
+        >
+        <a href="examples/chapter3/ch03_05_wall.html">Example 5 - Wall</a>
+        <a href="examples/chapter3/ch03_06_wall-final.html"
+          >Example 6 - Wall Final</a
+        >
+        <a href="examples/chapter3/ch03_07_positional-lighting.html"
+          >Example 7 - Positional Lighting</a
+        >
+        <a href="examples/chapter3/ch03_08_showroom.html"
+          >Example 8 - Showroom</a
+        >
+        <a href="examples/chapter3/ch03_09_showroom-final.html"
+          >Example 9 - Showroom Final</a
+        >
+      </div>
+
+      <!-- Add more chapters as needed -->
+    </div>
+
+    <footer>© 2025 WebGL Project</footer>
+
+    <script>
+      function toggleChapter(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "block") {
+          element.style.display = "none";
+        } else {
+          element.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
